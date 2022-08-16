@@ -1,0 +1,66 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:radar/recommended",
+        "plugin:sonarjs/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:react/jsx-runtime"
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "unused-imports",
+        "radar",
+        "simple-import-sort",
+        "sonarjs",
+        "react",
+        "react-hooks"
+    ],
+    "rules": {
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+        "linebreak-style": ["error", "unix"],
+        "indent": ["error", 4],
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "@typescript-eslint/no-unused-vars": "off",
+        "no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+        "error",
+        {
+            "vars": "all",
+            "varsIgnorePattern": "^_",
+            "args": "after-used",
+            "argsIgnorePattern": "^_"
+        }
+        ],
+        "@typescript-eslint/ban-ts-comment": "off",
+        "radar/cognitive-complexity": "off",
+        "react/display-name": "off",
+        "react/prop-types": "off",
+        "react/button-has-type": "error",
+        "react/function-component-definition": [
+        "error",
+        {
+            "namedComponents": "arrow-function",
+            "unnamedComponents": "arrow-function"
+        }
+        ],
+        "react/hook-use-state": "error",
+        "react/void-dom-elements-no-children": "error",
+        "react/jsx-boolean-value": ["error", "never"],
+        "react/jsx-fragments": ["error", "syntax"],
+        "react/jsx-indent": [
+            "error",
+            4,
+            {
+                "indentLogicalExpressions": true
+            }
+        ]
+    }
+}
